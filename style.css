@@ -75,11 +75,12 @@ button {
   background: linear-gradient(45deg, #78909c, #546e7a);
   color: white;
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.22s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform, left, top; /* performance ভালো রাখে */
 }
 
 #noBtn:active {
-  transform: scale(0.95);
+  transform: scale(0.88) rotate(5deg);   /* ক্লিক করলে একটু shake/crazy ফিল */
 }
 
 .surprise {
